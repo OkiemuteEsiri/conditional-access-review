@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Privileged Admin MFA",
+    "state":"enabled",
+    "scope":"privileged_roles",
+    "controls":["mfa"],
+    "excluded_groups":["Emergency Access Accounts"],
+    "application_tier":"all",
+    "expected_baseline":true
+  },
+  {
+    "name":"All Users MFA",
+    "state":"enabled",
+    "scope":"all_users",
+    "controls":["mfa"],
+    "excluded_groups":[],
+    "application_tier":"all",
+    "expected_baseline":true
+  },
+  {
+    "name":"Legacy Authentication Block",
+    "state":"disabled",
+    "scope":"all_users",
+    "controls":["block_legacy_auth"],
+    "excluded_groups":[],
+    "application_tier":"all",
+    "expected_baseline":true
+  },
+  {
+    "name":"Sensitive Apps Device Trust",
+    "state":"enabled",
+    "scope":"all_users",
+    "controls":["compliant_device"],
+    "excluded_groups":["All Contractors"],
+    "application_tier":"sensitive",
+    "expected_baseline":true
+  }
+]
